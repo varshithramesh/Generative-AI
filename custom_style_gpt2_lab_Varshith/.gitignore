@@ -1,0 +1,5 @@
+.venv/
+.venv-1/
+custom_style_gpt2_lab/outputs/
+custom_style_gpt2_lab/**/__pycache__/
+custom_style_gpt2_lab/**/*.pyc
