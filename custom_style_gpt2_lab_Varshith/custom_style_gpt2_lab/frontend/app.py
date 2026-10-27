@@ -3,10 +3,17 @@
 from __future__ import annotations
 
 import io
+import sys
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+
+# Streamlit Cloud can execute this file directly, in which case only the
+# frontend directory is added to sys.path.
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+if str(PROJECT_DIR) not in sys.path:
+    sys.path.insert(0, str(PROJECT_DIR))
 
 from backend import (
     CHECKPOINT_DIR,

@@ -62,9 +62,12 @@ requirements.txt     Python dependencies
 
 ## Deploy on Streamlit Community Cloud
 
-1. Push the `custom_style_gpt2_lab` folder to a GitHub repository.
+1. Push the project to a GitHub repository. If the project remains nested in
+   this repository, keep the root `requirements.txt` file so Streamlit Cloud
+   installs the model dependencies.
 2. In Streamlit Community Cloud, create an app and select `app.py` as the
-   **Main file path**.
+   **Main file path** (the root deployment entry point). The nested
+   `frontend\app.py` is also supported if you select it directly.
 3. Set the Python version to 3.10 or 3.11 and deploy.
 
 The app downloads the base GPT-2 checkpoint on its first model operation and
